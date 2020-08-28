@@ -7,5 +7,5 @@ jobs:
      - run: |
         curl -L -o cirrus https://github.com/cirruslabs/cirrus-cli/releases/latest/download/cirrus-linux-amd64
         sudo mv cirrus /usr/local/bin/cirrus
-        sudo chmod +x /usr/local/bin/cirrus=
+        sudo chmod +x /usr/local/bin/cirrus
      - run: cirrus run
