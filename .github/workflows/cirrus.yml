@@ -11,10 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install Cirrus CLI
-      run: |
-        curl -L -o cirrus https://api.cirrus-ci.com/v1/artifact/task/5095325666902016/binaries/dist/cirrus_linux_amd64/cirrus
-        sudo mv cirrus /usr/local/bin/cirrus
-        sudo chmod +x /usr/local/bin/cirrus
-    - name: Cirrus Run
-      run: cirrus run
+    - uses: cirruslabs/cirrus-action@v1-rc
